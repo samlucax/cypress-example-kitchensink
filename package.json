@@ -15,6 +15,7 @@
     "dev": "npm start",
     "types": "tsc --noEmit",
     "test": "npm start & cypress run",
+    "ftest": "npm start & cypress run --spec cypress/integration/examples/actions.spec.js",
     "pretest": "npm run lint && npm run types",
     "print-env": "print-env",
     "lint": "eslint --fix cypress/**/*.js app/assets/js/scripts.js",
