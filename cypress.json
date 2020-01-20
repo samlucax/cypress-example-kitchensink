@@ -4,7 +4,8 @@
   "reporterOptions": {
     "mochaFile": "cypress/results/output-[hash].xml",
     "toConsole": true,
-    "useFullSuiteTitle": true
+    "useFullSuiteTitle": true,
+    "suiteTitleSeparedBy": " - "
   }  
 }
 
