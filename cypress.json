@@ -1,3 +1,9 @@
 {
-  "projectId": "4b7344"
+  "projectId": "4b7344",
+  "reporter": "junit",
+  "reporterOptions": {
+    "mochaFile": "cypress/results/output-[hash].xml",
+    "toConsole": true
+  }  
 }
+
