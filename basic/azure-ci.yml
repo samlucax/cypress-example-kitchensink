@@ -51,10 +51,10 @@ jobs:
           testResultsFiles: '**/*.xml'
           mergeTestResults: true
 
-      - task: ArchiveFiles@2
-        inputs:
-          rootFolderOrFile: 'cypress/*'
-          includeRootFolder: false
-          archiveType: 'zip'
-          archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-          replaceExistingArchive: true
+      # - task: ArchiveFiles@2
+      #   inputs:
+      #     rootFolderOrFile: 'cypress/*'
+      #     includeRootFolder: false
+      #     archiveType: 'zip'
+      #     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+      #     replaceExistingArchive: true
