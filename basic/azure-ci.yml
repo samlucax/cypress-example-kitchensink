@@ -44,8 +44,17 @@ jobs:
       - script: npm run test
         displayName: 'Run Cypress tests'
 
+
       - task: PublishTestResults@2
         inputs:
           testResultsFormat: 'JUnit'
-          testResultsFiles: '**/TEST-*.xml'
+          testResultsFiles: '**/*.xml'
           mergeTestResults: true
+
+      - task: ArchiveFiles@2
+        inputs:
+          rootFolderOrFile: 'cypress/*'
+          includeRootFolder: false
+          archiveType: 'zip'
+          archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+          replaceExistingArchive: true
